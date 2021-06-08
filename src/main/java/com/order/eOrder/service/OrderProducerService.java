@@ -18,5 +18,6 @@ public class OrderProducerService {
 		LOGGER.info("Before kafka send ");
 		kafkaTemplate.send(TOPIC, new Order(order.getOid(), order.getPid(), order.getQnt(), order.getPrice(),order.getCname(), order.getCaddress()));
 		LOGGER.info("after kafka send ",order.getOid());
+		System.out.println("Test");
 	}
 }
